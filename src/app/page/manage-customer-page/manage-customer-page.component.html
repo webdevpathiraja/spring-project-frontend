@@ -1,2 +1,77 @@
 <p>manage-customer-page works!</p>
 <h1 class="bg-danger text-white text-center">Manage Customer Page</h1>
+
+<!-- <h1>{{customerList[0].name}}</h1>
+<h1>{{customerList[2].address}}</h1> -->
+
+<!-- <ol *ngFor = "let customer of customerList">
+    <li>{{customer.name}}</li>
+</ol> -->
+
+<div class="container">
+    <table class="table tab-bordered">
+        <tr>
+            <th>Count</th>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Email</th>
+        </tr>
+    
+        <tr *ngFor = "let customer of customerList; index as i">
+            <td>{{i+1}}</td>
+            <td>{{customer.id}}</td>
+            <td>{{customer.name}}</td>
+            <td>{{customer.address}}</td>
+            <td>{{customer.email}}</td>
+
+
+            <td><button class="btn btn-danger" (click) = "deleteCustomerById(customer.id)"><i class="bi bi-trash3"></i></button>
+            </td>
+
+
+            <td><button class="btn btn-primary"><i class="bi bi-pen"></i></button></td>
+        </tr>
+    </table>
+</div>
+
+
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Open modal for mdo</button>
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@fat">Open modal for fat</button>
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap">Open modal for getbootstrap</button>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="recipient-name" class="col-form-label">Recipient:</label>
+            <input type="text" class="form-control" id="recipient-name">
+          </div>
+          <div class="form-group">
+            <label for="message-text" class="col-form-label">Message:</label>
+            <textarea class="form-control" id="message-text"></textarea>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Send message</button>
+      </div>
+    </div>
+  </div>
+</div>
+ 
+
+
+
+<!-- for(let customer of customerList){
+
+} -->
