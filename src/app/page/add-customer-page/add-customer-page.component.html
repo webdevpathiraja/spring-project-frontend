@@ -1,1 +1,15 @@
-<p>add-customer-page works!</p>
+<!-- <p>add-customer-page works!</p> -->
+
+<h1 class="bg-dark text-white p-3 text-center">Add Customer Page</h1>
+
+<input type="text" placeholder="name" [(ngModel)]="customer.name"> <br> 
+
+<input type="text" placeholder="address" [(ngModel)]="customer.address"> <br>
+
+<input type="text" placeholder="email" [(ngModel)]="customer.email"> <br>
+
+<input type="button" value="Add Customer" (click)="addCustomer()"> 
+
+<h1>{{customer.name}}</h1>
+<h2>{{customer.address}}</h2>
+<h3>{{customer.email}}</h3>
